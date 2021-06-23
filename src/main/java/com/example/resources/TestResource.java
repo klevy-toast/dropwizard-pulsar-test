@@ -8,6 +8,7 @@ import org.apache.pulsar.client.api.ProducerCryptoFailureAction;
 import org.apache.pulsar.client.api.PulsarClient;
 import org.apache.pulsar.client.api.PulsarClientException;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -24,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 public class TestResource {
     final int num_producers = 10;
     final PulsarClient client;
-    List<Producer<byte[]>> producers;
+    List<Producer<byte[]>> producers = new ArrayList();
 
     public TestResource(PulsarClient client) {
         this.client = client;
