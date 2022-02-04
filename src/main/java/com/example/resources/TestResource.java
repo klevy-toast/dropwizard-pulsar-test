@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 @Path("/test")
 @Produces(MediaType.APPLICATION_JSON)
 public class TestResource {
-    final int num_producers = 30;
+    final int num_producers = 500;
     final PulsarClient client;
     List<Producer<byte[]>> producers = new ArrayList();
 

@@ -19,7 +19,6 @@ import io.dropwizard.setup.Environment;
 
 public class PulsarTestApplication extends Application<PulsarTestConfiguration> {
     PulsarClient client;
-    Producer producer;
 
     public static void main(final String[] args) throws Exception {
         new PulsarTestApplication().run(args);
